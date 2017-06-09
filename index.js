@@ -130,7 +130,7 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 		this.suma.addEventListener("click", fl_ClickToGoToWebPage);
 		
 		function fl_ClickToGoToWebPage() {
-			window.open("file:///D:/Documents/GitHub/LaSalleZ/burbujas.html");
+			window.open("https://carlosyosa.github.io/LaSalleZ/burbujas");
 		}
 	}
 
@@ -150,14 +150,14 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 	this.text.lineHeight = 57;
 	this.text.lineWidth = 221;
 	this.text.parent = this;
-	this.text.setTransform(643.5,479.7,1.19,0.951);
+	this.text.setTransform(643.5,452.7,1.19,0.951);
 
 	this.text_1 = new cjs.Text("Multiplicación", "50px 'Times New Roman'");
 	this.text_1.textAlign = "center";
 	this.text_1.lineHeight = 57;
 	this.text_1.lineWidth = 295;
 	this.text_1.parent = this;
-	this.text_1.setTransform(639.2,381,1.19,0.951);
+	this.text_1.setTransform(639.2,362,1.19,0.951);
 
 	this.text_2 = new cjs.Text("Diferencia", "50px 'Times New Roman'");
 	this.text_2.textAlign = "center";
