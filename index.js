@@ -117,6 +117,26 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 (lib.index = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_0 = function() {
+		/* Hacer clic para ir a página Web
+		Al hacer clic en la instancia del símbolo especificado, la dirección URL se carga en una nueva ventana del navegador.
+		
+		Instrucciones:
+		1. Reemplace http://www.adobe.com por la dirección URL que desee.
+		      Conserve las comillas ("").
+		*/
+		
+		this.suma.addEventListener("click", fl_ClickToGoToWebPage);
+		
+		function fl_ClickToGoToWebPage() {
+			window.open("file:///D:/Documents/GitHub/LaSalleZ/burbujas.html");
+		}
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
 	// Figuras
 	this.instance = new lib.escuadra();
 	this.instance.parent = this;
@@ -146,21 +166,22 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 	this.text_2.parent = this;
 	this.text_2.setTransform(641.1,263.5,1.19,0.951);
 
-	this.text_3 = new cjs.Text("Suma ", "50px 'Times New Roman'");
+	this.suma = new cjs.Text("Suma ", "50px 'Times New Roman'");
+	this.suma.name = "suma";
+	this.suma.textAlign = "center";
+	this.suma.lineHeight = 57;
+	this.suma.lineWidth = 190;
+	this.suma.parent = this;
+	this.suma.setTransform(650.4,172.6,1.19,0.951);
+
+	this.text_3 = new cjs.Text("La Salle Zipaquira", "50px 'Times New Roman'");
 	this.text_3.textAlign = "center";
 	this.text_3.lineHeight = 57;
-	this.text_3.lineWidth = 190;
+	this.text_3.lineWidth = 716;
 	this.text_3.parent = this;
-	this.text_3.setTransform(650.4,172.6,1.19,0.951);
+	this.text_3.setTransform(625.8,70.3,1.19,0.951);
 
-	this.text_4 = new cjs.Text("La Salle Zipaquira", "50px 'Times New Roman'");
-	this.text_4.textAlign = "center";
-	this.text_4.lineHeight = 57;
-	this.text_4.lineWidth = 716;
-	this.text_4.parent = this;
-	this.text_4.setTransform(625.8,70.3,1.19,0.951);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_4},{t:this.text_3},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_3},{t:this.suma},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
 
 	// Tablero
 	this.instance_1 = new lib.paleta();
